@@ -1,0 +1,86 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.heading{
+    text-align: center;
+    color: green;
+    width: 100%;
+    height: 40px;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color:cadetblue;
+    padding-bottom: 10px;
+}
+.heading a{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    background-color: blueviolet;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding-top: -3px;
+    padding-bottom: -3px;
+}
+.main{
+    width: 100%;
+    height: 600px;
+}
+.info{
+    width: 30%;
+    height: 50px;
+    padding: 0px;
+    background-color: bisque;
+    margin-top: -4px;
+    
+}
+.info h2{
+    color: red;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-top: 0px;
+    background-color: bisque;
+    padding-bottom: 2px;
+    padding-left: 4px;
+}
+.para{
+    width: 70%;
+    height: 50px;
+    padding: 0px; 
+    float: right;
+    margin-top: -50px;
+    background-color: bisque;
+}
+.para p {
+    color: orange;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: bisque;
+    font-size: 18px;
+    margin-top: 2px;
+    padding-top: 0px;
+    text-align: center;
+    padding-left: 4px;
+}
+@media screen and (max-device-width:600px) and (min-device-width:300px){
+.heading{
+ color: aqua;
+}
+.heading a{
+    color: blueviolet;
+}
+.info h2{
+    color: chartreuse;
+}
+.para p{
+    color:chocolate;
+}
+.heading , .heading a, .info, .info h2, .para , .para p{
+    background-color: darkgray;
+}
+.heading a{
+    background-color:brown;
+}
+.main , .heading{
+   width: 700px;
+}
+}

@@ -1,0 +1,126 @@
+/* .rounded
+{
+    height: 100px;
+}
+.nav
+{
+    height: 100px;
+} */
+/* .img-fluid
+{
+    width: 100%;
+    height: 90%;
+} */
+/* .card-img-top
+{
+    width: 40px;
+} */
+/* .card
+{
+    width: 70px;
+} */
+ /* .card
+ {
+    display: inline-block;
+ } *
+  /* ------------------------------------------------------------------------------------------------------------------- */
+
+  .continer
+  {
+    height: 60px;
+    background-color: darkblue;
+    display: flex;
+  }
+  .logo
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 50px;
+  }
+  .contitext
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    margin-left: 40px;
+    border-bottom: 4px solid rgb(226, 226, 19);
+  }
+  .contitexet1
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    margin-left: 15px;
+  }
+  .a1
+  {
+    color: white;
+  }
+  .space
+  {
+    margin-right: 700px;
+  }
+  .icon
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .icon
+  {
+    border-left: 1px solid white;
+    padding: 15px;
+  }
+  .iplico
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .iplico
+  {
+    border-left: 1px solid white;
+    padding: 15px;
+  }
+  .wplcon
+  {
+    border-left: 1px solid white;
+    padding: 15px;
+  }
+  .wplcon
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+.deshico
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    padding: 15px;
+}
+.EN{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 15px;
+}
+.en option
+{
+    width: 20px;
+}
+.bx:active
+{
+    width: 90px;
+}
+.cricketmanulist
+{
+  display: block;  
+  list-style: none;
+}

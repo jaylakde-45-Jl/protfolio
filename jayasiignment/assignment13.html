@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Patterns</h1>
+    <button type="button" onclick="p1()">Pattern 1</button>
+    <button type="button" onclick="p2()">Pattern 2</button>
+    <button type="button" onclick="p3()">Pattern 3</button>
+    <button type="button" onclick="p4()">Pattern 4</button>
+
+    <h1>Combination Addition</h1>
+    <button type="button" onclick="Combination()">Click here</button>
+
+    <h1>Permutation addition</h1>
+    <button type="button" onclick="permutation()">Click here</button>
+    <script>
+        function p1() {
+            let space = "_";
+            let n = parseInt(prompt("Enter a number:"));
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < (n - i) * 2 - 1; j++) {
+                    document.write(space);
+                }
+                for (let k = 0; k < i * 2 + 1; k++) {
+                    document.write("*_")
+                }
+                document.write("<br>")
+            }
+        }
+        function p2() {
+            let space = "_";
+            let n = parseInt(prompt("Enter a number:"));
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < i * 2 - 1; j++) {
+                    document.write(space);
+                }
+                for (let k = 0; k < (n - i) * 2 - 1; k++) {
+                    document.write("*_")
+                }
+                document.write("<br>")
+            }
+        }
+        function p3() {
+            var i, j;
+            for (i = 1; i <= 5; i++) {
+                for (j = 1; j <= i; j++) {
+                    document.write(" * ");
+                }
+                document.write("<br>")
+            }
+            for (i = 1; i <= 4; i++) {
+                for (j = 4; j >= i; j--) {
+                    document.write(" * ");
+                }
+                document.write("<br>")
+            }
+        }
+        function p4() {
+            let n = parseInt(prompt('Enter any number'));
+            for (i = 1; i <= n; i++) {
+                for (let k = 0; k <= 2 * (n - i) - 1; k++) {
+                    document.write("_");
+                }
+                for (let j = 1; j <= i; j++) {
+                    document.write("*_");
+                }
+                document.write("<br>");
+            }
+            for (i = 1; i < n; i++) {
+                for (let k = 0; k < 2 * i; k++) {
+                    document.write("_");
+                }
+                for (let j = 0; j < n - i; j++) {
+                    document.write("*_");
+                }
+                document.write("<br>");
+            }
+        }
+
+        function Combination() {
+            var n = 5;
+            var r = 5;
+            var sum = 0;
+            var combine;
+            while (r >= 0) {
+                combine = Factorial(n) / Factorial(r) * Factorial(n - r);
+                sum = sum + combine;
+                r--;
+            }
+            document.write("Addition of Combination:" + sum);
+        }
+        function Factorial(number) {
+            var fact = 1;
+            var temp = number
+            while (temp != 0) {
+                fact = fact * temp;
+                temp--;
+            }
+            return fact;
+        }
+
+
+        function permutation() {
+            var n = 5;
+            var r = 5;
+            var sum = 0;
+            var permute;
+            while (r >= 0) {
+                permute = Factorial(n) / Factorial(n - r);
+                sum = sum + permute;
+                r--;
+            }
+            document.write("Addition of Permutation:" + sum);
+        }
+        function Factorial(number) {
+            var fact = 1;
+            var temp = number
+            while (temp != 0) {
+                fact = fact * temp;
+                temp--;
+            }
+            return fact;
+        }
+
+
+
+        function generateFibonacci() {
+            var n = document.getElementById('fibonacciInput').value;
+            var fib = [0, 1];
+            for (var i = 2; i < n; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+            document.getElementById('fibonacciOutput').innerText = fib.slice(0, n).join(', ');
+        }
+
+        function binaryToDecimal() {
+            var binary = document.getElementById('binaryInput').value;
+            var decimal = parseInt(binary, 2);
+            document.getElementById('decimalOutput').innerText = decimal;
+        }
+
+        function decimalToBinary() {
+            var decimal = document.getElementById('decimalInput').value;
+            var binary = Number(decimal).toString(2);
+            document.getElementById('binaryOutput').innerText = binary;
+        }
+    </script>
+</body>
+
+</html>

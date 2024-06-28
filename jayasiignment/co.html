@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combination Sums</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #results {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Combination Sums</h1>
+        <input type="text" id="inputArray" placeholder="Enter numbers separated by commas">
+        <button onclick="displayCombinations()">Calculate Combinations</button>
+        <div id="results"></div>
+    </div>
+    <script>
+        // Function to generate all combinations of an array
+        function getCombinations(arr) {
+            let result = [];
+
+            const helper = (start, combo) => {
+                for (let i = start; i < arr.length; i++) {
+                    combo.push(arr[i]);
+                    result.push([...combo]);
+                    helper(i + 1, combo);
+                    combo.pop();
+                }
+            };
+
+            helper(0, []);
+            return result;
+        }
+
+        // Combined function to add the numbers in each combination
+        function addCombinations(arr) {
+            let combinations = getCombinations(arr);
+            let sums = combinations.map(combo => combo.reduce((acc, num) => acc + num, 0));
+            return {
+                combinations: combinations,
+                sums: sums
+            };
+        }
+
+        // Function to display combinations and their sums
+        function displayCombinations() {
+            const input = document.getElementById('inputArray').value;
+            const array = input.split(',').map(Number);
+
+            const result = addCombinations(array);
+
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<h2>Results</h2>';
+
+            result.combinations.forEach((combo, index) => {
+                resultsDiv.innerHTML += <p>Combination: [${combo.join(', ')}], Sum: ${result.sums[index]}</p>;
+            });
+        }
+    </script>
+</body>
+</html>
